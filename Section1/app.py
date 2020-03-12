@@ -49,6 +49,12 @@ api.add_resource(UserLogin, "/login")
 api.add_resource(UserLogout, "/logout")
 api.add_resource(TokenRefresh, "/refresh")
 
+
+@app.route('/')
+def index():
+    return "Possible endpoints: <h1>/items</h1> <h2>stores</h2> "
+
+
 if __name__ == "__main__":
     db.init_app(app)
-    app.run(port=5000, debug=True)
+    app.run(port=5000, debug=True, host='0.0.0.0')
