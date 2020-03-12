@@ -5,6 +5,7 @@ from flask_jwt_extended import JWTManager
 from resources.user import UserRegister, User, UserLogin, UserLogout, TokenRefresh
 from blacklist import BLACKLIST
 
+from ma import ma
 from db import db
 
 app = Flask(__name__)
@@ -51,4 +52,5 @@ def index():
 
 if __name__ == "__main__":
     db.init_app(app)
+    ma.init_app(app)
     app.run(port=5000, debug=True, host='0.0.0.0')
