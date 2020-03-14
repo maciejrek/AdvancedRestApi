@@ -31,10 +31,8 @@ class Item(Resource):
         item_json = request.get_json()
         item_json["name"] = name
 
-        try:
-            item = item_schema.load(item_json)
-        except ValidationError as err:
-            return err.messages, 400
+        # no try except thanks to handle_marshmallow_validation
+        item = item_schema.load(item_json)
 
         try:
             item.save_to_db()
@@ -62,10 +60,8 @@ class Item(Resource):
         else:
             item_json["name"] = name
 
-            try:
-                item = item_schema.load(item_json)
-            except ValidationError as err:
-                return err.messages, 400
+        # no try except thanks to handle_marshmallow_validation
+        item = item_schema.load(item_json)
 
         item.save_to_db()
 
