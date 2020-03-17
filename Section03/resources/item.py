@@ -36,7 +36,7 @@ class Item(Resource):
 
         try:
             item.save_to_db()
-        except:
+        except: # noqa: E722
             return {"message": ERROR_INSERTING}, 500
 
         return item_schema.dump(item), 201
