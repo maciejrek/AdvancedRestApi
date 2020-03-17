@@ -1,5 +1,5 @@
 from flask_restful import Resource
-from flask import request
+from flask import request, make_response, render_template
 from schemas.user import UserSchema
 from werkzeug.security import safe_str_cmp
 from flask_jwt_extended import (
@@ -112,4 +112,9 @@ class UserConfirm(Resource):
             return {"message": USER_NOT_FOUND}, 404
         user.activated = True
         user.save_to_db()
-        return {"message": USER_CONFIRMED}, 200
+        # To redirect user we can use:
+        # return redirect("<URL>",code=302)
+        headers = {"Content-Type": "text/html"}
+        return make_response(
+            render_template("confirmation_page.html", email=user.username), 200,
+            headers)
