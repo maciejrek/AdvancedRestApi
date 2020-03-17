@@ -131,3 +131,6 @@ dmypy.json
 # udemy
 .DS_Store
 *.pyc
+
+# local db
+*.db
