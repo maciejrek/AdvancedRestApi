@@ -12,6 +12,6 @@ class UserSchema(ma.ModelSchema):
     # for dump purposes:
     # set "list" containing last conf only to user.confirmation
     @pre_dump
-    def _pre_dump(self, user: UserModel):
+    def _pre_dump(self, user: UserModel, **kwargs):
         user.confirmation = [user.most_recent_confirmation]
         return user

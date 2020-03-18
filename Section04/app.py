@@ -13,6 +13,7 @@ from resources.user import (
 )
 from resources.item import Item, ItemList
 from resources.store import Store, StoreList
+from resources.confirmaton import Confirmation, ConfirmationByUser
 from blacklist import BLACKLIST
 
 from ma import ma
@@ -62,6 +63,8 @@ api.add_resource(User, "/user/<int:user_id>")
 api.add_resource(UserLogin, "/login")
 api.add_resource(UserLogout, "/logout")
 api.add_resource(TokenRefresh, "/refresh")
+api.add_resource(Confirmation, "/user_confirmation/<string:confirmation_id>")
+api.add_resource(ConfirmationByUser, "/confirmation/user/<int:user_id>")
 
 
 @app.route('/')
@@ -73,3 +76,5 @@ if __name__ == "__main__":
     db.init_app(app)
     ma.init_app(app)
     app.run(port=5000, debug=True, host='0.0.0.0')
+
+
