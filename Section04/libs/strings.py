@@ -23,4 +23,13 @@ def gettext(name: str):
     return cached_strings[name]
 
 
+# We can add setter to change default_locale
+# def set_default_locale(locale):
+#     global default_locale
+#     default_locale = locale
+# Otherwise to change locale we need to:
+# import strings
+# strings.default_locale = "new-locale"
+# strings.refresh()
+
 refresh()

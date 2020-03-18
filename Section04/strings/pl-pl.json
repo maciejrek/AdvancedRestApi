@@ -1,0 +1,32 @@
+{
+  "mailgun_failed_load_api_key": "Polish: Failed to load MailGun API key.",
+  "mailgun_failed_load_domain": "Polish: Failed to load MailGun domain.",
+  "mailgun_error_send_email": "Polish: Error in sending confirmation email,user registration failed",
+
+  "confirmation_not_found": "Polish: Confirmation reference not found.",
+  "confirmation_link_expired": "Polish: The link has expired.",
+  "confirmation_already_confirmed": "Polish: Registration has already been confirmed.",
+  "confirmation_resend_fail": "Polish: Internal server error. Failed to resend confirmation email.",
+  "confirmation_resend_successful": "Polish: E-mail confirmation successfully re-sent.",
+
+  "item_name_exists": "Polish: An item with name '{}' already exists.",
+  "item_error_inserting": "Polish: An error occurred while inserting the item.",
+  "item_not_found": "Polish: Item not found.",
+  "item_deleted": "Polish: Item deleted.",
+
+  "store_name_exists": "Polish: A store with name '{}' already exists.",
+  "store_error_inserting": "Polish: An error occurred while inserting the store.",
+  "store_not_found": "Polish: Store not found.",
+  "store_deleted": "Polish: Store deleted.",
+
+  "user_username_exists": "Polish: A user with that username already exists.",
+  "user_email_exists": "Polish: A user with that email already exists.",
+  "user_not_found": "Polish: User not found.",
+  "user_deleted": "Polish: User deleted.",
+  "user_invalid_credentials": "Polish: Invalid credentials!",
+  "user_logged_out": "Polish: User <id={}> successfully logged out.",
+  "user_not_confirmed": "Polish: You have not confirmed registration, please check your email <{}>",
+  "user_confirmed": "Polish: User confirmed.",
+  "user_error_creating": "Polish: Internal server error. Failed to create user",
+  "user_registered": "Polish: Account created successfully, an email with an activation link has been sent. Please check your email."
+}
