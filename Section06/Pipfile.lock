@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "900ccaae2ded70475fef4f66eba58ddfcc014e4a92262595f18df73a3cc477b5"
+            "sha256": "1e72c834a87c0aad74ab797561907d229f8f073ac7225e5a02a3b8b788b647ae"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -99,11 +99,8 @@
             "version": "==2.4.1"
         },
         "flask-uploads": {
-            "hashes": [
-                "sha256:53ecbd6033667d50ae02b63adebbaa33c7fc56c09e5293025810cf9d841ecb02"
-            ],
-            "index": "pypi",
-            "version": "==0.2.1"
+            "git": "https://github.com/maxcountryman/flask-uploads.git",
+            "ref": "f66d7dc93e684fa0a3a4350a38e41ae00483a796"
         },
         "idna": {
             "hashes": [

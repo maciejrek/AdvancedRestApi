@@ -1,10 +1,13 @@
-import os
 from flask import Flask, jsonify
 from flask_restful import Api
 from flask_jwt_extended import JWTManager
+from flask_uploads import configure_uploads, patch_request_class
 from marshmallow import ValidationError
 from dotenv import load_dotenv
 
+from blacklist import BLACKLIST
+from ma import ma
+from db import db
 from resources.user import (
     UserRegister,
     User,
@@ -15,15 +18,17 @@ from resources.user import (
 from resources.item import Item, ItemList
 from resources.store import Store, StoreList
 from resources.confirmaton import Confirmation, ConfirmationByUser
-from blacklist import BLACKLIST
-
-from ma import ma
-from db import db
+from resources.image import ImageUpload
+from libs.image_helper import IMAGE_SET
 
 app = Flask(__name__)
 load_dotenv(".env", verbose=True)
 app.config.from_object("default_config")
 app.config.from_envvar("APPLICATION_SETTINGS")
+patch_request_class(app, 10 * 1024 * 1024)  # 10 MB max size upload
+# links up the app with flask uploads and IMAGE_SET
+configure_uploads(app, IMAGE_SET)
+
 api = Api(app)
 
 
@@ -60,6 +65,7 @@ api.add_resource(UserLogout, "/logout")
 api.add_resource(TokenRefresh, "/refresh")
 api.add_resource(Confirmation, "/user_confirmation/<string:confirmation_id>")
 api.add_resource(ConfirmationByUser, "/confirmation/user/<int:user_id>")
+api.add_resource(ImageUpload, "/upload/image")
 
 
 @app.route('/')
@@ -70,4 +76,4 @@ def index():
 if __name__ == "__main__":
     db.init_app(app)
     ma.init_app(app)
-    app.run(port=5000, debug=True, host='0.0.0.0')
+    app.run(port=5000, host='0.0.0.0')
