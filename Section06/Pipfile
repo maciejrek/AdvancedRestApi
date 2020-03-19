@@ -16,6 +16,7 @@ marshmallow-sqlalchemy = "*"
 flake8 = "*"
 requests = "*"
 python-dotenv = "*"
+flask-uploads = "*"
 
 [requires]
 python_version = "3.7"
