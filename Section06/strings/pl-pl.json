@@ -31,5 +31,9 @@
   "user_registered": "Polish: Account created successfully, an email with an activation link has been sent. Please check your email.",
 
   "image_uploaded" : "Polish: Image '{}' uploaded.",
-  "image_illegal_extension" : "Polish: Extension '{}' is not allowed."
+  "image_illegal_extension" : "Polish: Extension '{}' is not allowed.",
+  "image_illegal_file_name": "Polish: Illegal filename '{}' requested.",
+  "image_not_found": "Polish: Image '{}' not found.",
+  "image_deleted": "Polish: Image '{}' deleted.",
+  "image_delete_failed": "Polish: Internal server error. Cannot delete image."
 }

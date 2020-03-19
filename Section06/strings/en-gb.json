@@ -31,5 +31,9 @@
   "user_registered": "Account created successfully, an email with an activation link has been sent. Please check your email.",
 
   "image_uploaded" : "Image '{}' uploaded.",
-  "image_illegal_extension" : "Extension '{}' is not allowed."
+  "image_illegal_extension" : "Extension '{}' is not allowed.",
+  "image_illegal_file_name": "Illegal filename '{}' requested.",
+  "image_not_found": "Image '{}' not found.",
+  "image_deleted": "Image '{}' deleted.",
+  "image_delete_failed": "Internal server error. Cannot delete image."
 }
