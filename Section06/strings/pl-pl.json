@@ -35,5 +35,8 @@
   "image_illegal_file_name": "Polish: Illegal filename '{}' requested.",
   "image_not_found": "Polish: Image '{}' not found.",
   "image_deleted": "Polish: Image '{}' deleted.",
-  "image_delete_failed": "Polish: Internal server error. Cannot delete image."
+  "image_delete_failed": "Polish: Internal server error. Cannot delete image.",
+
+  "avatar_delete_failed": "Polish: Internal server error! Failed to delete avatar.",
+  "avatar_uploaded": "Polish: Avatar '{}' uploaded."
 }

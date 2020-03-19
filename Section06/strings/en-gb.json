@@ -35,5 +35,8 @@
   "image_illegal_file_name": "Illegal filename '{}' requested.",
   "image_not_found": "Image '{}' not found.",
   "image_deleted": "Image '{}' deleted.",
-  "image_delete_failed": "Internal server error. Cannot delete image."
+  "image_delete_failed": "Internal server error! Cannot delete image.",
+
+  "avatar_delete_failed": "Internal server error! Failed to delete avatar.",
+  "avatar_uploaded": "Avatar '{}' uploaded."
 }
