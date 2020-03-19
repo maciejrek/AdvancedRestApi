@@ -28,5 +28,8 @@
   "user_not_confirmed": "Polish: You have not confirmed registration, please check your email <{}>",
   "user_confirmed": "Polish: User confirmed.",
   "user_error_creating": "Polish: Internal server error. Failed to create user",
-  "user_registered": "Polish: Account created successfully, an email with an activation link has been sent. Please check your email."
+  "user_registered": "Polish: Account created successfully, an email with an activation link has been sent. Please check your email.",
+
+  "image_uploaded" : "Polish: Image '{}' uploaded.",
+  "image_illegal_extension" : "Polish: Extension '{}' is not allowed."
 }
